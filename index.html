@@ -11,6 +11,11 @@
       /* ============================================================
        BASIC STYLES — students can tweak colors/fonts here
        ============================================================ */
+      :root {
+        --accent: #2c3e50;
+        --accent-soft: #34495e;
+      }
+
       * {
         box-sizing: border-box;
         margin: 0;
@@ -18,36 +23,40 @@
       }
 
       body {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
         color: #222;
         background: #f7f7f7;
-        line-height: 1.5;
+        line-height: 1.6;
       }
 
       .container {
         max-width: 900px;
         margin: 0 auto;
-        padding: 40px 20px;
+        padding: 56px 24px;
       }
 
       /* ---------- HEADER (photo + name + subheading) ---------- */
       header {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 48px;
       }
 
       .photo {
-        width: 140px;
-        height: 140px;
+        width: 160px;
+        height: 160px;
         border-radius: 50%;
-        margin: 0 auto 16px;
+        margin: 0 auto 20px;
         display: block;
         object-fit: cover;
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.15), 0 4px 14px rgba(0, 0, 0, 0.08);
       }
 
       header h1 {
-        font-size: 28px;
-        margin-bottom: 6px;
+        font-size: 30px;
+        margin-bottom: 8px;
+        color: var(--accent);
       } /* NAME */
       header p {
         font-size: 16px;
@@ -58,23 +67,30 @@
       .tabs {
         display: flex;
         justify-content: center;
-        gap: 10px;
-        margin-bottom: 24px;
+        gap: 12px;
+        margin-bottom: 32px;
       }
 
       .tab-button {
-        padding: 10px 22px;
-        border: 1px solid #ccc;
+        padding: 10px 24px;
+        border: 1px solid #ddd;
         background: #fff;
+        color: var(--accent-soft);
         cursor: pointer;
         font-size: 15px;
-        border-radius: 4px;
+        font-family: inherit;
+        border-radius: 6px;
+        transition: border-color 0.15s ease, color 0.15s ease;
+      }
+
+      .tab-button:hover {
+        border-color: var(--accent);
       }
 
       .tab-button.active {
-        background: #2c3e50;
+        background: var(--accent);
         color: #fff;
-        border-color: #2c3e50;
+        border-color: var(--accent);
       }
 
       /* ---------- TAB CONTENT ---------- */
@@ -87,30 +103,126 @@
 
       .panel {
         background: #fff;
-        border: 1px solid #eee;
-        border-radius: 6px;
-        padding: 24px;
+        border-radius: 8px;
+        padding: 32px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
       }
 
-      /* ---------- PROJECT CARDS (1 x 3 grid) ---------- */
+      /* ---------- EDUCATION TIMELINE ---------- */
+      .section-title {
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent-soft);
+        margin: 32px 0 16px;
+      }
+
+      .edu-list {
+        border-left: 2px solid #e4e6e9;
+        margin-left: 4px;
+        padding-left: 24px;
+      }
+
+      .edu-item {
+        position: relative;
+        padding: 4px 0 22px;
+      }
+
+      .edu-item:last-child {
+        padding-bottom: 0;
+      }
+
+      .edu-item::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: -30px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.12);
+      }
+
+      .edu-item h3 {
+        font-size: 15px;
+        color: var(--accent);
+        margin-bottom: 2px;
+      }
+
+      .edu-degree {
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 4px;
+      }
+
+      .edu-dates {
+        font-size: 12px;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      /* ---------- EXPERIENCE LIST ---------- */
+      .exp-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .exp-item {
+        border-left: 3px solid var(--accent);
+        border-radius: 6px;
+        background: #fff;
+        padding: 16px 22px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+      }
+
+      .exp-item h3 {
+        font-size: 16px;
+        color: var(--accent);
+        margin-bottom: 4px;
+      }
+
+      .exp-meta {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 8px;
+      }
+
+      .exp-item p {
+        font-size: 14px;
+        color: #555;
+      }
+
+      /* ---------- PROJECT CARDS ---------- */
       .cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
       }
 
       .card {
-        border: 1px solid #eee;
-        border-radius: 6px;
+        flex: 0 1 280px;
+        border-top: 3px solid var(--accent);
+        border-radius: 8px;
         overflow: hidden;
         background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+        transition: box-shadow 0.15s ease, transform 0.15s ease;
+      }
+
+      .card:hover {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+        transform: translateY(-2px);
       }
 
       /* Empty space for project photo */
       .card-photo {
         height: 120px;
-        background: #ddd;
-        border-bottom: 1px dashed #aaa;
+        background: #eef0f2;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -119,11 +231,12 @@
       }
 
       .card-text {
-        padding: 14px;
+        padding: 18px;
       }
       .card-text h3 {
         font-size: 16px;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
+        color: var(--accent);
       }
       .card-text p {
         font-size: 14px;
@@ -132,8 +245,8 @@
 
       /* ---------- MOBILE: stack cards vertically ---------- */
       @media (max-width: 640px) {
-        .cards {
-          grid-template-columns: 1fr;
+        .card {
+          flex-basis: 100%;
         }
       }
     </style>
@@ -145,10 +258,10 @@
          HEADER: photo, name, experiences
          ============================================================ -->
       <header>
-        <img src="photo.jpg" alt="Yasmine Berrada" class="photo" />
+        <img src="photo.jpg" alt="Yasmine Mekki Berrada" class="photo" />
 
-        <h1>Yasmine Berrada</h1>
-        <p>Master's Student in Management Analytics @ McGill · Business & Finance Background · Aspiring Management Consultant</p>
+        <h1>Yasmine Mekki Berrada</h1>
+        <p>Business Management @ Westminster Business School · Sales & Trading / Global Markets</p>
       </header>
 
       <!-- ============================================================
@@ -157,6 +270,9 @@
       <div class="tabs">
         <button class="tab-button active" onclick="showTab('about')">
           About Me
+        </button>
+        <button class="tab-button" onclick="showTab('experience')">
+          Experience
         </button>
         <button class="tab-button" onclick="showTab('projects')">
           Projects
@@ -167,15 +283,83 @@
       <div id="about" class="tab-content active">
         <div class="panel">
           <p>
-            I'm currently pursuing a Master's in Management Analytics at McGill
-            University, building on a background in business and finance to turn data into
-            actionable insights. I'm especially interested in consulting roles where
-            analytics can drive strategic decision-making.
+            I'm currently pursuing a Bachelor's in Business Management at Westminster
+            Business School, on track for a predicted First Class. Before that, I studied
+            on the Computer Science & Engineering Foundation programme at King's College
+            London (80%), as a recipient of the KCL Scholars of Tomorrow Scholarship. I'm
+            especially interested in Sales & Trading and Global Markets, and bring hands-on
+            skills in Python, Excel, DCF & LBO modeling, and FX pricing models.
           </p>
+
+          <div class="section-title">Education</div>
+          <div class="edu-list">
+            <!-- EDUCATION 1 -->
+            <div class="edu-item">
+              <h3>Westminster Business School</h3>
+              <div class="edu-degree">BA Business Management — 1st (Predicted)</div>
+              <div class="edu-dates">Sep 2023 – Jun 2026</div>
+            </div>
+
+            <!-- EDUCATION 2 -->
+            <div class="edu-item">
+              <h3>King's College London</h3>
+              <div class="edu-degree">BSc Mathematics with Management and Finance</div>
+              <div class="edu-dates">Sep 2021 – Jul 2023</div>
+            </div>
+
+            <!-- EDUCATION 3 -->
+            <div class="edu-item">
+              <h3>King's College London</h3>
+              <div class="edu-degree">Computer Science and Engineering Foundation — 1st (80%), KCL Scholars of Tomorrow Scholarship</div>
+              <div class="edu-dates">Sep 2020 – Jul 2021</div>
+            </div>
+
+            <!-- EDUCATION 4 -->
+            <div class="edu-item">
+              <h3>École Belge de Casablanca</h3>
+              <div class="edu-degree">Belgian Diploma — Valedictorian (17/20), Rank 1/78</div>
+              <div class="edu-dates">June 2020</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- ---------- TAB 2: PROJECTS ---------- -->
+      <!-- ---------- TAB 2: EXPERIENCE ---------- -->
+      <div id="experience" class="tab-content">
+        <div class="panel">
+          <div class="exp-list">
+            <!-- EXPERIENCE 1 -->
+            <div class="exp-item">
+              <h3>Trading Floor Intern — Banque Populaire</h3>
+              <div class="exp-meta">Casablanca · June – July 2025</div>
+              <p>Gained exposure to front, middle, and back office operations, and built a forward pricing tool for MAD/EUR/USD in Excel using spot rates and swap points.</p>
+            </div>
+
+            <!-- EXPERIENCE 2 -->
+            <div class="exp-item">
+              <h3>Sales & Trading Summer Analyst — Morgan Stanley</h3>
+              <div class="exp-meta">London · July – August 2023</div>
+              <p>Rotated across the CEEMEA credit and FX desks, taking part in morning prep and market wraps, and built Excel tools for blotters and pre-trade checks. Also supported the Emerging Markets Solutions team on pitch pages.</p>
+            </div>
+
+            <!-- EXPERIENCE 3 -->
+            <div class="exp-item">
+              <h3>Spring Week — Morgan Stanley</h3>
+              <div class="exp-meta">London · April 2022</div>
+              <p>Completed a Spring Week across the Global Markets and Investment Banking divisions, and received an offer for the 2023 summer internship.</p>
+            </div>
+
+            <!-- EXPERIENCE 4 -->
+            <div class="exp-item">
+              <h3>Asset Management Intern — Société Générale</h3>
+              <div class="exp-meta">Casablanca · June – July 2021</div>
+              <p>Analyzed the UCITS market in Morocco using macroeconomic tools and wrote a market report that was later used as an onboarding document for future trainees.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- TAB 3: PROJECTS ---------- -->
       <div id="projects" class="tab-content">
         <div class="cards">
           <!-- CARD 1 -->
@@ -183,25 +367,7 @@
             <div class="card-photo">Project Image</div>
             <div class="card-text">
               <h3>Vanilla Options Pricing Automation</h3>
-              <p>Python program using the Black-Scholes model to calculate European option values, implied volatility, and the Greeks (Delta, Rho, Gamma, Vega, Theta), displayed in a clean grid.</p>
-            </div>
-          </div>
-
-          <!-- CARD 2 -->
-          <div class="card">
-            <div class="card-photo">Project Image</div>
-            <div class="card-text">
-              <h3>Cryptocurrency Project</h3>
-              <p>Collaborated with 2 classmates to build a simple private token; won the prize for best class project.</p>
-            </div>
-          </div>
-
-          <!-- CARD 3 -->
-          <div class="card">
-            <div class="card-photo">Project Image</div>
-            <div class="card-text">
-              <h3>Financial Analysis & Audit at Banque Centrale Populaire</h3>
-              <p>Analyzed financial data, supported audit reports and compliance reviews, and monitored securities transactions and fund transfers during internships in investment banking and audit.</p>
+              <p>Python program automating options pricing using the Black-Scholes model, calculating European option values, implied volatility, and the Greeks, displayed in a clean grid.</p>
             </div>
           </div>
         </div>
