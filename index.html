@@ -36,19 +36,13 @@
         margin-bottom: 30px;
       }
 
-      /* Empty space for photo — replace with your own <img> if you like */
       .photo {
         width: 140px;
         height: 140px;
         border-radius: 50%;
-        background: #ddd;
-        border: 2px dashed #aaa;
         margin: 0 auto 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #888;
-        font-size: 13px;
+        display: block;
+        object-fit: cover;
       }
 
       header h1 {
@@ -151,8 +145,7 @@
          HEADER: photo, name, experiences
          ============================================================ -->
       <header>
-        <!-- Replace this div with <img src="your-photo.jpg" class="photo"> -->
-        <div class="photo">Photo</div>
+        <img src="photo.jpg" alt="Yasmine Berrada" class="photo" />
 
         <h1>Yasmine Berrada</h1>
         <p>Master's Student in Management Analytics @ McGill · Business & Finance Background · Aspiring Management Consultant</p>
@@ -189,8 +182,8 @@
           <div class="card">
             <div class="card-photo">Project Image</div>
             <div class="card-text">
-              <h3>Project Title</h3>
-              <p>Short description of what you did and the tools you used.</p>
+              <h3>Vanilla Options Pricing Automation</h3>
+              <p>Python program using the Black-Scholes model to calculate European option values, implied volatility, and the Greeks (Delta, Rho, Gamma, Vega, Theta), displayed in a clean grid.</p>
             </div>
           </div>
 
@@ -198,8 +191,8 @@
           <div class="card">
             <div class="card-photo">Project Image</div>
             <div class="card-text">
-              <h3>Project Title</h3>
-              <p>Short description of what you did and the tools you used.</p>
+              <h3>Cryptocurrency Project</h3>
+              <p>Collaborated with 2 classmates to build a simple private token; won the prize for best class project.</p>
             </div>
           </div>
 
@@ -207,8 +200,8 @@
           <div class="card">
             <div class="card-photo">Project Image</div>
             <div class="card-text">
-              <h3>Project Title</h3>
-              <p>Short description of what you did and the tools you used.</p>
+              <h3>Financial Analysis & Audit at Banque Centrale Populaire</h3>
+              <p>Analyzed financial data, supported audit reports and compliance reviews, and monitored securities transactions and fund transfers during internships in investment banking and audit.</p>
             </div>
           </div>
         </div>
