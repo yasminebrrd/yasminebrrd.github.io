@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Analytics Portfolio</title>.
+    <title>Yasmine Berrada | Portfolio</title>
 
     <style>
       /* ============================================================
@@ -249,19 +249,34 @@
           flex-basis: 100%;
         }
       }
+
+      /* ---------- ADDED: links, notes, skills, tags ---------- */
+      header .links { margin-top: 10px; font-size: 15px; }
+      header .links a, .card a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(44,62,80,.3); }
+      header .links a:hover { border-bottom-color: var(--accent); }
+      .edu-note { font-size: 13px; color: #777; margin-bottom: 4px; }
+      .skills { font-size: 14px; color: #444; margin-bottom: 6px; }
+      .exp-item ul { padding-left: 18px; font-size: 14px; color: #555; }
+      .exp-item li { margin-bottom: 4px; }
+      .card-tag { font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px; }
     </style>
   </head>
 
   <body>
     <div class="container">
       <!-- ============================================================
-         HEADER: photo, name, experiences
+         HEADER: photo, name, links
          ============================================================ -->
       <header>
-        <img src="photo.jpg" alt="Yasmine Mekki Berrada" class="photo" />
+        <img src="photo.jpg" alt="Yasmine Berrada" class="photo" />
 
-        <h1>Yasmine Mekki Berrada</h1>
-        <p>Master's Student in Management Analytics @ McGill · Business & Finance background · Sales & Trading / Global Markets</p>
+        <h1>Yasmine Berrada</h1>
+        <p>Master of Management Analytics @ McGill · Business &amp; Finance background · Sales &amp; Trading / Global Markets</p>
+        <p class="links">
+          <a href="mailto:yasminemberrada@gmail.com">Email</a> ·
+          <a href="https://github.com/yasminebrrd">GitHub</a> ·
+          <a href="https://yasmineberrada.neocities.org/">Blog</a>
+        </p>
       </header>
 
       <!-- ============================================================
@@ -283,52 +298,56 @@
       <div id="about" class="tab-content active">
         <div class="panel">
           <p>
-            I'm currently pursuing a Master's in Management Analytics at McGill University.
+            I'm currently pursuing a Master of Management Analytics at McGill University.
             Before that, I completed a Bachelor's in Business Management at Westminster
-            Business School, on track for a predicted First Class, and studied on the
-            Computer Science & Engineering Foundation programme at King's College London
-            (80%), as a recipient of the KCL Scholars of Tomorrow Scholarship. I'm
-            especially interested in Sales & Trading and Global Markets, and bring hands-on
-            skills in Python, Excel, DCF & LBO modeling, and FX pricing models.
+            Business School (2:1), and studied on the Computer Science &amp; Engineering
+            Foundation programme at King's College London (1st, 80%), as a recipient of the
+            KCL Scholars of Tomorrow Scholarship. I'm especially interested in Sales &amp;
+            Trading and Global Markets, and bring hands-on skills in Python, SQL, R, Excel,
+            DCF &amp; LBO modeling, and FX pricing.
           </p>
 
           <div class="section-title">Education</div>
           <div class="edu-list">
-            <!-- EDUCATION 0 -->
             <div class="edu-item">
-              <h3>McGill University</h3>
-              <div class="edu-degree">Master's in Management Analytics</div>
-              <div class="edu-dates">Sep 2026 – Jun 2028</div>
+              <h3>McGill University · Montreal</h3>
+              <div class="edu-degree">Master of Management Analytics, 3.7 GPA (Predicted)</div>
+              <div class="edu-note">Mathematics and Statistics for Analytics · Database and Distributed Systems · AI &amp; Deep Learning · Enterprise Machine Learning in Production · Multivariate Statistical Analysis</div>
+              <div class="edu-dates">Jul 2026 – May 2027</div>
             </div>
 
-            <!-- EDUCATION 1 -->
             <div class="edu-item">
-              <h3>Westminster Business School</h3>
-              <div class="edu-degree">BA Business Management — 1st (Predicted)</div>
+              <h3>Westminster Business School · London</h3>
+              <div class="edu-degree">Bachelor's in Business Management, 2:1</div>
+              <div class="edu-note">Accounting &amp; Finance (76%) · Money, Banking &amp; Financial Markets (77%) · Data Analytics for Decision Making (70%)</div>
               <div class="edu-dates">Sep 2023 – Jun 2026</div>
             </div>
 
-            <!-- EDUCATION 2 -->
             <div class="edu-item">
-              <h3>King's College London</h3>
-              <div class="edu-degree">BSc Mathematics with Management and Finance</div>
+              <h3>King's College London · London</h3>
+              <div class="edu-degree">BSc Mathematics with Management and Finance (switched majors, not completed)</div>
+              <div class="edu-note">Calculus II (67%) · Probability &amp; Statistics (70%) · Accounting (72%)</div>
               <div class="edu-dates">Sep 2021 – Jul 2023</div>
             </div>
 
-            <!-- EDUCATION 3 -->
             <div class="edu-item">
-              <h3>King's College London</h3>
-              <div class="edu-degree">Computer Science and Engineering Foundation — 1st (80%), KCL Scholars of Tomorrow Scholarship</div>
+              <h3>King's College London · London</h3>
+              <div class="edu-degree">Computer Science and Engineering Foundation, 1st (80%), KCL Scholars of Tomorrow Scholarship</div>
+              <div class="edu-note">Mathematics (94%) · Computer Science &amp; Engineering (90%)</div>
               <div class="edu-dates">Sep 2020 – Jul 2021</div>
             </div>
 
-            <!-- EDUCATION 4 -->
             <div class="edu-item">
-              <h3>École Belge de Casablanca</h3>
-              <div class="edu-degree">Belgian Diploma — Valedictorian (17/20), Rank 1/78</div>
-              <div class="edu-dates">June 2020</div>
+              <h3>École Belge de Casablanca · Casablanca</h3>
+              <div class="edu-degree">Belgian Diploma, Valedictorian (17/20, High Honors), Rank 1/78, Class Representative</div>
+              <div class="edu-dates">Jun 2020</div>
             </div>
           </div>
+
+          <div class="section-title">Skills</div>
+          <p class="skills"><strong>Technical:</strong> Python, MATLAB, SQL, R, Excel (Advanced), VBA, PyTorch, TensorFlow, Power BI, Bloomberg Terminal, DCF &amp; LBO Modeling</p>
+          <p class="skills"><strong>Languages:</strong> French, Arabic, English (all fluent)</p>
+          <p class="skills"><strong>Interests:</strong> Horse riding, tennis, piano</p>
         </div>
       </div>
 
@@ -336,32 +355,23 @@
       <div id="experience" class="tab-content">
         <div class="panel">
           <div class="exp-list">
-            <!-- EXPERIENCE 1 -->
             <div class="exp-item">
-              <h3>Trading Floor Intern — Banque Populaire</h3>
-              <div class="exp-meta">Casablanca · June – July 2025</div>
-              <p>Gained exposure to front, middle, and back office operations, and built a forward pricing tool for MAD/EUR/USD in Excel using spot rates and swap points.</p>
+              <h3>Trading Floor Intern · Banque Populaire</h3>
+              <div class="exp-meta">Casablanca, Morocco · May – Jul 2025</div>
+              <ul>
+                <li>Gained exposure to front, middle and back office operations, building a holistic understanding of the full trade lifecycle.</li>
+                <li>Worked with Sales &amp; Trading traders and financial analysts to strengthen market knowledge and client communication skills.</li>
+                <li>Built a forward pricing tool for MAD, EUR and USD in Excel using spot rates and swap points, improving the accuracy of FX projections.</li>
+              </ul>
             </div>
 
-            <!-- EXPERIENCE 2 -->
             <div class="exp-item">
-              <h3>Sales & Trading Summer Analyst — Morgan Stanley</h3>
-              <div class="exp-meta">London · July – August 2023</div>
-              <p>Rotated across the CEEMEA credit and FX desks, taking part in morning prep and market wraps, and built Excel tools for blotters and pre-trade checks. Also supported the Emerging Markets Solutions team on pitch pages.</p>
-            </div>
-
-            <!-- EXPERIENCE 3 -->
-            <div class="exp-item">
-              <h3>Spring Week — Morgan Stanley</h3>
-              <div class="exp-meta">London · April 2022</div>
-              <p>Completed a Spring Week across the Global Markets and Investment Banking divisions, and received an offer for the 2023 summer internship.</p>
-            </div>
-
-            <!-- EXPERIENCE 4 -->
-            <div class="exp-item">
-              <h3>Asset Management Intern — Société Générale</h3>
-              <div class="exp-meta">Casablanca · June – July 2021</div>
-              <p>Analyzed the UCITS market in Morocco using macroeconomic tools and wrote a market report that was later used as an onboarding document for future trainees.</p>
+              <h3>Asset Management Intern · Société Générale (SogéCapital Gestion)</h3>
+              <div class="exp-meta">Casablanca, Morocco · May – Jul 2021</div>
+              <ul>
+                <li>Analyzed the UCITS market in Morocco using macroeconomic tools and compared it with the French UCITS market.</li>
+                <li>Wrote a report on the UCITS market for the department's director, later used by future trainees as an introduction document.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -370,12 +380,19 @@
       <!-- ---------- TAB 3: PROJECTS ---------- -->
       <div id="projects" class="tab-content">
         <div class="cards">
-          <!-- CARD 1 -->
           <div class="card">
-            <div class="card-photo">Project Image</div>
             <div class="card-text">
-              <h3>Vanilla Options Pricing Automation</h3>
-              <p>Python program automating options pricing using the Black-Scholes model, calculating European option values, implied volatility, and the Greeks, displayed in a clean grid.</p>
+              <div class="card-tag">Python · Jun 2024</div>
+              <h3>Black-Scholes Options Pricer</h3>
+              <p>A Black-Scholes pricer that returns European option values, implied volatility and the full Greeks (delta, gamma, vega, theta, rho) in a single readable grid, so a position can be checked without rebuilding it in Excel.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-text">
+              <div class="card-tag">R · Jul 2020</div>
+              <h3>Predicting the Champions League Winner</h3>
+              <p>Built a 16-season dataset (about 500 rows, 12 features) by hand where tables couldn't be scraped reliably. Benchmarked logistic regression and random forest in R (caret); both found UEFA country coefficient and group stage results to be the strongest predictors, with domestic form much weaker than expected. Correctly forecast Bayern Munich a month before the final, and published the method with its limitations.</p>
             </div>
           </div>
         </div>
@@ -397,7 +414,7 @@
         });
         // show the selected tab + highlight the clicked button
         document.getElementById(id).classList.add("active");
-        event.target.classList.add("active");
+        (event.currentTarget || event.target).classList.add("active");
       }
     </script>
   </body>
